@@ -14,6 +14,8 @@ namespace VirtualZooManagementSystem
             InitializeComponent();
             zoo = new List<Animal>();
             this.StartPosition = FormStartPosition.CenterScreen;
+            // Initialize labels to be always visible
+            SetLabelVisibility(true);
         }
 
         private void btnAddAnimal_Click(object sender, EventArgs e)
@@ -44,6 +46,9 @@ namespace VirtualZooManagementSystem
         {
             textBoxSearch.Clear();
             UpdateListBox();
+            // Clear the details and hide the labels
+            ClearAnimalDetails();
+            SetLabelVisibility(false);
         }
 
         private void listBoxZoo_SelectedIndexChanged(object sender, EventArgs e)
@@ -52,16 +57,22 @@ namespace VirtualZooManagementSystem
             {
                 Animal selectedAnimal = (Animal)listBoxZoo.SelectedItem;
                 DisplayAnimalDetails(selectedAnimal);
+                // Show the labels and details
+                SetLabelVisibility(true);
             }
             else
             {
+                // If no item is selected, clear the details and hide the labels
                 ClearAnimalDetails();
+                SetLabelVisibility(false);
             }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            // Clear the details only and hide the labels
             ClearAnimalDetails();
+            SetLabelVisibility(false);
         }
 
         private void UpdateListBox()
@@ -74,25 +85,37 @@ namespace VirtualZooManagementSystem
         private void DisplayAnimalDetails(Animal animal)
         {
             labelName.Text = $"Name: {animal.Name}";
-            labelAnimalType.Text = $"Type: {animal.AnimalType}";
+            labelAnimalType.Text = $"Animal Type: {animal.AnimalType}";
             labelAge.Text = $"Age: {animal.Age}";
             labelSound.Text = $"Sound: {animal.Sound}";
             labelMovement.Text = $"Movement: {animal.Movement}";
-
-            labelName.Visible = true;
-            labelAnimalType.Visible = true;
-            labelAge.Visible = true;
-            labelSound.Visible = true;
-            labelMovement.Visible = true;
+            labelSpecies.Text = $"Species: {animal.Species}";
+            labelFoodType.Text = $"Food Type: {animal.FoodType}";
+            labelHabitatType.Text = $"Habitat Type: {animal.HabitatType}";
         }
 
         private void ClearAnimalDetails()
         {
-            labelName.Visible = false;
-            labelAnimalType.Visible = false;
-            labelAge.Visible = false;
-            labelSound.Visible = false;
-            labelMovement.Visible = false;
+            labelName.Text = "";
+            labelAnimalType.Text = "";
+            labelAge.Text = "";
+            labelSound.Text = "";
+            labelMovement.Text = "";
+            labelSpecies.Text = "";
+            labelFoodType.Text = "";
+            labelHabitatType.Text = "";
+        }
+
+        private void SetLabelVisibility(bool visible)
+        {
+            labelName.Visible = visible;
+            labelAnimalType.Visible = visible;
+            labelAge.Visible = visible;
+            labelSound.Visible = visible;
+            labelMovement.Visible = visible;
+            labelSpecies.Visible = visible;
+            labelFoodType.Visible = visible;
+            labelHabitatType.Visible = visible;
         }
     }
 }

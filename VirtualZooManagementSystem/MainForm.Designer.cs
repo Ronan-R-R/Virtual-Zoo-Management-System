@@ -1,4 +1,6 @@
-﻿namespace VirtualZooManagementSystem
+﻿using System.Windows.Forms;
+
+namespace VirtualZooManagementSystem
 {
     partial class MainForm
     {
@@ -28,6 +30,9 @@
             this.labelSound = new System.Windows.Forms.Label();
             this.labelMovement = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
+            this.labelSpecies = new System.Windows.Forms.Label();
+            this.labelFoodType = new System.Windows.Forms.Label();
+            this.labelHabitatType = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAddAnimal
@@ -138,11 +143,41 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // labelSpecies
+            // 
+            this.labelSpecies.AutoSize = true;
+            this.labelSpecies.Location = new System.Drawing.Point(16, 363);
+            this.labelSpecies.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSpecies.Name = "labelSpecies";
+            this.labelSpecies.Size = new System.Drawing.Size(0, 17);
+            this.labelSpecies.TabIndex = 11;
+            // 
+            // labelFoodType
+            // 
+            this.labelFoodType.AutoSize = true;
+            this.labelFoodType.Location = new System.Drawing.Point(16, 386);
+            this.labelFoodType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelFoodType.Name = "labelFoodType";
+            this.labelFoodType.Size = new System.Drawing.Size(0, 17);
+            this.labelFoodType.TabIndex = 12;
+            // 
+            // labelHabitatType
+            // 
+            this.labelHabitatType.AutoSize = true;
+            this.labelHabitatType.Location = new System.Drawing.Point(16, 409);
+            this.labelHabitatType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelHabitatType.Name = "labelHabitatType";
+            this.labelHabitatType.Size = new System.Drawing.Size(0, 17);
+            this.labelHabitatType.TabIndex = 13;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 380);
+            this.ClientSize = new System.Drawing.Size(575, 440);
+            this.Controls.Add(this.labelHabitatType);
+            this.Controls.Add(this.labelFoodType);
+            this.Controls.Add(this.labelSpecies);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.labelMovement);
             this.Controls.Add(this.labelSound);
@@ -175,5 +210,8 @@
         private System.Windows.Forms.Label labelSound;
         private System.Windows.Forms.Label labelMovement;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label labelSpecies;
+        private System.Windows.Forms.Label labelFoodType;
+        private System.Windows.Forms.Label labelHabitatType;
     }
 }

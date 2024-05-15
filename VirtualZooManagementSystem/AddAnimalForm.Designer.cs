@@ -1,4 +1,6 @@
-﻿namespace VirtualZooManagementSystem
+﻿using System.Windows.Forms;
+
+namespace VirtualZooManagementSystem
 {
     partial class AddAnimalForm
     {
