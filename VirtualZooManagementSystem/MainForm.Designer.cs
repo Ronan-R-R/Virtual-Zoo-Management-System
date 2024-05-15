@@ -37,6 +37,8 @@ namespace VirtualZooManagementSystem
             this.labelSpecies = new System.Windows.Forms.Label();
             this.labelFoodType = new System.Windows.Forms.Label();
             this.labelHabitatType = new System.Windows.Forms.Label();
+            this.btnMainMenu = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAddAnimal
@@ -127,9 +129,9 @@ namespace VirtualZooManagementSystem
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(355, 195);
+            this.btnClear.Location = new System.Drawing.Point(344, 195);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(64, 23);
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 10;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -159,11 +161,33 @@ namespace VirtualZooManagementSystem
             this.labelHabitatType.Size = new System.Drawing.Size(0, 13);
             this.labelHabitatType.TabIndex = 13;
             // 
+            // btnMainMenu
+            // 
+            this.btnMainMenu.Location = new System.Drawing.Point(344, 224);
+            this.btnMainMenu.Name = "btnMainMenu";
+            this.btnMainMenu.Size = new System.Drawing.Size(75, 23);
+            this.btnMainMenu.TabIndex = 14;
+            this.btnMainMenu.Text = "Main Menu";
+            this.btnMainMenu.UseVisualStyleBackColor = true;
+            this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(344, 253);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 15;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(431, 297);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.labelHabitatType);
             this.Controls.Add(this.labelFoodType);
             this.Controls.Add(this.labelSpecies);
@@ -200,5 +224,7 @@ namespace VirtualZooManagementSystem
         private System.Windows.Forms.Label labelSpecies;
         private System.Windows.Forms.Label labelFoodType;
         private System.Windows.Forms.Label labelHabitatType;
+        private System.Windows.Forms.Button btnMainMenu;
+        private System.Windows.Forms.Button btnClose;
     }
 }

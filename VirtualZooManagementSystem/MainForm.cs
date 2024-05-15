@@ -25,9 +25,9 @@ namespace VirtualZooManagementSystem
         private void btnAddAnimal_Click(object sender, EventArgs e)
         {
             AddAnimalForm addAnimalForm = new AddAnimalForm();
-            DialogResult result = addAnimalForm.ShowDialog();
+            addAnimalForm.ShowDialog();
 
-            if (result == DialogResult.OK)
+            if (addAnimalForm.DialogResult == DialogResult.OK)
             {
                 zoo.Add(addAnimalForm.NewAnimal);
                 UpdateListBox();
@@ -77,6 +77,21 @@ namespace VirtualZooManagementSystem
             // Clear the details only and hide the labels
             ClearAnimalDetails();
             SetLabelVisibility(false);
+        }
+
+        private void btnMainMenu_Click(object sender, EventArgs e)
+        {
+            // Close the current form and show the Main Menu form
+            this.Hide();
+            MainMenuForm mainMenuForm = new MainMenuForm();
+            mainMenuForm.Show();
+            this.Hide();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            // Close the application
+            Application.Exit();
         }
 
         private void UpdateListBox()

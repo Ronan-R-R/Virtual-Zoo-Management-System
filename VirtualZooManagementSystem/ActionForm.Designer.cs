@@ -1,4 +1,6 @@
-﻿namespace VirtualZooManagementSystem
+﻿using System.Windows.Forms;
+
+namespace VirtualZooManagementSystem
 {
     partial class ActionForm
     {
@@ -12,6 +14,8 @@
             }
             base.Dispose(disposing);
         }
+
+        #region Windows Form Designer generated code
 
         private void InitializeComponent()
         {
@@ -62,6 +66,8 @@
             this.Text = "Interactions";
             this.ResumeLayout(false);
         }
+
+        #endregion
 
         private System.Windows.Forms.Button btnListen;
         private System.Windows.Forms.Button btnFeed;
