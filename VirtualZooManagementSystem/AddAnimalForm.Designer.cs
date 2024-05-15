@@ -35,7 +35,6 @@ namespace VirtualZooManagementSystem
             this.labelFoodType = new System.Windows.Forms.Label();
             this.labelHabitatType = new System.Windows.Forms.Label();
             this.labelAnimalType = new System.Windows.Forms.Label();
-            this.labelSpecies = new System.Windows.Forms.Label(); // Added label for Animal Species
             this.btnAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAge)).BeginInit();
             this.SuspendLayout();
@@ -71,7 +70,7 @@ namespace VirtualZooManagementSystem
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(12, 18);
+            this.labelName.Location = new System.Drawing.Point(222, 37);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(35, 13);
             this.labelName.TabIndex = 4;
@@ -80,7 +79,7 @@ namespace VirtualZooManagementSystem
             // labelAge
             // 
             this.labelAge.AutoSize = true;
-            this.labelAge.Location = new System.Drawing.Point(12, 64);
+            this.labelAge.Location = new System.Drawing.Point(222, 82);
             this.labelAge.Name = "labelAge";
             this.labelAge.Size = new System.Drawing.Size(26, 13);
             this.labelAge.TabIndex = 5;
@@ -89,7 +88,7 @@ namespace VirtualZooManagementSystem
             // labelSound
             // 
             this.labelSound.AutoSize = true;
-            this.labelSound.Location = new System.Drawing.Point(12, 110);
+            this.labelSound.Location = new System.Drawing.Point(222, 129);
             this.labelSound.Name = "labelSound";
             this.labelSound.Size = new System.Drawing.Size(38, 13);
             this.labelSound.TabIndex = 6;
@@ -98,7 +97,7 @@ namespace VirtualZooManagementSystem
             // labelMovement
             // 
             this.labelMovement.AutoSize = true;
-            this.labelMovement.Location = new System.Drawing.Point(12, 156);
+            this.labelMovement.Location = new System.Drawing.Point(222, 175);
             this.labelMovement.Name = "labelMovement";
             this.labelMovement.Size = new System.Drawing.Size(57, 13);
             this.labelMovement.TabIndex = 7;
@@ -107,45 +106,36 @@ namespace VirtualZooManagementSystem
             // labelFoodType
             // 
             this.labelFoodType.AutoSize = true;
-            this.labelFoodType.Location = new System.Drawing.Point(225, 18);
+            this.labelFoodType.Location = new System.Drawing.Point(222, 37);
             this.labelFoodType.Name = "labelFoodType";
-            this.labelFoodType.Size = new System.Drawing.Size(57, 13);
+            this.labelFoodType.Size = new System.Drawing.Size(58, 13);
             this.labelFoodType.TabIndex = 8;
             this.labelFoodType.Text = "Food Type";
             // 
             // labelHabitatType
             // 
             this.labelHabitatType.AutoSize = true;
-            this.labelHabitatType.Location = new System.Drawing.Point(225, 64);
+            this.labelHabitatType.Location = new System.Drawing.Point(222, 82);
             this.labelHabitatType.Name = "labelHabitatType";
-            this.labelHabitatType.Size = new System.Drawing.Size(67, 13);
+            this.labelHabitatType.Size = new System.Drawing.Size(68, 13);
             this.labelHabitatType.TabIndex = 9;
             this.labelHabitatType.Text = "Habitat Type";
             // 
             // labelAnimalType
             // 
             this.labelAnimalType.AutoSize = true;
-            this.labelAnimalType.Location = new System.Drawing.Point(225, 110);
+            this.labelAnimalType.Location = new System.Drawing.Point(222, 129);
             this.labelAnimalType.Name = "labelAnimalType";
-            this.labelAnimalType.Size = new System.Drawing.Size(66, 13);
+            this.labelAnimalType.Size = new System.Drawing.Size(65, 13);
             this.labelAnimalType.TabIndex = 10;
             this.labelAnimalType.Text = "Animal Type";
-            // 
-            // labelSpecies
-            // 
-            this.labelSpecies.AutoSize = true;
-            this.labelSpecies.Location = new System.Drawing.Point(225, 156);
-            this.labelSpecies.Name = "labelSpecies";
-            this.labelSpecies.Size = new System.Drawing.Size(45, 13);
-            this.labelSpecies.TabIndex = 11;
-            this.labelSpecies.Text = "Species";
             // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(12, 216);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(363, 23);
-            this.btnAdd.TabIndex = 12;
+            this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -154,9 +144,8 @@ namespace VirtualZooManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 251); // Adjusted width and height
+            this.ClientSize = new System.Drawing.Size(387, 251);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.labelSpecies);
             this.Controls.Add(this.labelAnimalType);
             this.Controls.Add(this.labelHabitatType);
             this.Controls.Add(this.labelFoodType);
@@ -168,7 +157,6 @@ namespace VirtualZooManagementSystem
             this.Controls.Add(this.textBoxSound);
             this.Controls.Add(this.numericUpDownAge);
             this.Controls.Add(this.textBoxName);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle; // Prevent resizing
             this.Name = "AddAnimalForm";
             this.Text = "Add Animal";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAge)).EndInit();
