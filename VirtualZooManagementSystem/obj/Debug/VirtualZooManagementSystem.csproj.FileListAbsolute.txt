@@ -37,3 +37,4 @@ C:\Users\Ronan\Documents\Git\Virtual-Zoo-Management-System\VirtualZooManagementS
 C:\Users\Ronan\Documents\Git\Virtual-Zoo-Management-System\VirtualZooManagementSystem\obj\Debug\VirtualZooManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\Ronan\Documents\Git\Virtual-Zoo-Management-System\VirtualZooManagementSystem\obj\Debug\VirtualZooManagementSystem.exe
 C:\Users\Ronan\Documents\Git\Virtual-Zoo-Management-System\VirtualZooManagementSystem\obj\Debug\VirtualZooManagementSystem.pdb
+C:\Users\Ronan\Documents\Git\Virtual-Zoo-Management-System\VirtualZooManagementSystem\obj\Debug\VirtualZooManagementSystem.AddAnimalForm.resources

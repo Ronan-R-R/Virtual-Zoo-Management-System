@@ -2,16 +2,8 @@
 {
     partial class MainForm
     {
-        
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,10 +15,6 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.btnAddAnimal = new System.Windows.Forms.Button();
@@ -35,7 +23,7 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.listBoxZoo = new System.Windows.Forms.ListBox();
             this.labelName = new System.Windows.Forms.Label();
-            this.labelAnimalType = new System.Windows.Forms.Label(); 
+            this.labelAnimalType = new System.Windows.Forms.Label();
             this.labelAge = new System.Windows.Forms.Label();
             this.labelSound = new System.Windows.Forms.Label();
             this.labelMovement = new System.Windows.Forms.Label();
@@ -45,7 +33,7 @@
             // btnAddAnimal
             // 
             this.btnAddAnimal.Location = new System.Drawing.Point(16, 15);
-            this.btnAddAnimal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddAnimal.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddAnimal.Name = "btnAddAnimal";
             this.btnAddAnimal.Size = new System.Drawing.Size(141, 28);
             this.btnAddAnimal.TabIndex = 0;
@@ -56,7 +44,7 @@
             // textBoxSearch
             // 
             this.textBoxSearch.Location = new System.Drawing.Point(165, 17);
-            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(176, 22);
             this.textBoxSearch.TabIndex = 1;
@@ -64,7 +52,7 @@
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(351, 15);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(100, 28);
             this.btnSearch.TabIndex = 2;
@@ -75,7 +63,7 @@
             // btnReset
             // 
             this.btnReset.Location = new System.Drawing.Point(459, 15);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(4);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(100, 28);
             this.btnReset.TabIndex = 3;
@@ -88,7 +76,7 @@
             this.listBoxZoo.FormattingEnabled = true;
             this.listBoxZoo.ItemHeight = 16;
             this.listBoxZoo.Location = new System.Drawing.Point(16, 50);
-            this.listBoxZoo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxZoo.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxZoo.Name = "listBoxZoo";
             this.listBoxZoo.Size = new System.Drawing.Size(541, 180);
             this.listBoxZoo.TabIndex = 4;
@@ -141,12 +129,12 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(459, 359);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClear.Location = new System.Drawing.Point(473, 336);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(100, 28);
+            this.btnClear.Size = new System.Drawing.Size(85, 28);
             this.btnClear.TabIndex = 10;
-            this.btnClear.Text = "Clear Details";
+            this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
@@ -154,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 402);
+            this.ClientSize = new System.Drawing.Size(575, 380);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.labelMovement);
             this.Controls.Add(this.labelSound);
@@ -166,11 +154,12 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.btnAddAnimal);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "Virtual Zoo Management System";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
@@ -181,7 +170,7 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.ListBox listBoxZoo;
         private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.Label labelAnimalType; 
+        private System.Windows.Forms.Label labelAnimalType;
         private System.Windows.Forms.Label labelAge;
         private System.Windows.Forms.Label labelSound;
         private System.Windows.Forms.Label labelMovement;

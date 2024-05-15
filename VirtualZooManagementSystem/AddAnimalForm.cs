@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace VirtualZooManagementSystem
@@ -10,28 +9,37 @@ namespace VirtualZooManagementSystem
 
         private ComboBox comboBoxFoodType;
         private ComboBox comboBoxHabitatType;
-        private AnimalType animalType; // Declare animalType variable
+        private ComboBox comboBoxAnimalType; // Added comboBoxAnimalType
 
-        public AddAnimalForm(AnimalType animalType) // Add constructor to pass animalType
+        public AddAnimalForm()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.animalType = animalType; // Assign animalType
 
-            // Initialize combo boxes for food type and habitat type
+            // Initialize combo boxes for food type, habitat type, and animal type
             comboBoxFoodType = new ComboBox();
             comboBoxFoodType.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxFoodType.Items.AddRange(Enum.GetNames(typeof(FoodType)));
-            comboBoxFoodType.Location = new Point(102, 206);
+            comboBoxFoodType.Location = new System.Drawing.Point(225, 34); // Adjusted location
+            comboBoxFoodType.Size = new System.Drawing.Size(150, 21); // Adjusted size
             comboBoxFoodType.SelectedIndex = 0;
             this.Controls.Add(comboBoxFoodType);
 
             comboBoxHabitatType = new ComboBox();
             comboBoxHabitatType.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxHabitatType.Items.AddRange(Enum.GetNames(typeof(HabitatType)));
-            comboBoxHabitatType.Location = new Point(102, 236);
+            comboBoxHabitatType.Location = new System.Drawing.Point(225, 80); // Adjusted location
+            comboBoxHabitatType.Size = new System.Drawing.Size(150, 21); // Adjusted size
             comboBoxHabitatType.SelectedIndex = 0;
             this.Controls.Add(comboBoxHabitatType);
+
+            comboBoxAnimalType = new ComboBox(); // Initialize comboBoxAnimalType
+            comboBoxAnimalType.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxAnimalType.Items.AddRange(Enum.GetNames(typeof(AnimalType)));
+            comboBoxAnimalType.Location = new System.Drawing.Point(225, 126); // Adjusted location
+            comboBoxAnimalType.Size = new System.Drawing.Size(150, 21); // Adjusted size
+            comboBoxAnimalType.SelectedIndex = 0;
+            this.Controls.Add(comboBoxAnimalType);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -43,12 +51,11 @@ namespace VirtualZooManagementSystem
 
             if (!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(sound) && !string.IsNullOrEmpty(movement))
             {
-                // Get selected food type and habitat type
                 FoodType foodType = (FoodType)comboBoxFoodType.SelectedIndex;
                 HabitatType habitatType = (HabitatType)comboBoxHabitatType.SelectedIndex;
+                AnimalType animalType = (AnimalType)comboBoxAnimalType.SelectedIndex; // Get selected animal type
 
-                // Create a new animal based on the selected type
-                switch (animalType) // Use the animalType obtained from the constructor
+                switch (animalType)
                 {
                     case AnimalType.Mammal:
                         NewAnimal = new Mammal(name, age, sound, movement, foodType, habitatType);
@@ -66,7 +73,6 @@ namespace VirtualZooManagementSystem
                         throw new ArgumentOutOfRangeException("Unknown animal type.");
                 }
 
-                // Set dialog result to OK if creation is successful
                 DialogResult = DialogResult.OK;
             }
             else

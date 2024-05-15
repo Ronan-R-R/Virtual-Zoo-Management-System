@@ -18,8 +18,7 @@ namespace VirtualZooManagementSystem
 
         private void btnAddAnimal_Click(object sender, EventArgs e)
         {
-            // Pass the AnimalType value when creating an instance of AddAnimalForm
-            AddAnimalForm addAnimalForm = new AddAnimalForm(AnimalType.Mammal);
+            AddAnimalForm addAnimalForm = new AddAnimalForm();
             DialogResult result = addAnimalForm.ShowDialog();
 
             if (result == DialogResult.OK)
