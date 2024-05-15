@@ -27,3 +27,13 @@ C:\Users\ronan\Documents\Git\VirtualZooManagementSystem\VirtualZooManagementSyst
 C:\Users\ronan\Documents\Git\VirtualZooManagementSystem\VirtualZooManagementSystem\obj\Debug\VirtualZooManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\ronan\Documents\Git\VirtualZooManagementSystem\VirtualZooManagementSystem\obj\Debug\VirtualZooManagementSystem.exe
 C:\Users\ronan\Documents\Git\VirtualZooManagementSystem\VirtualZooManagementSystem\obj\Debug\VirtualZooManagementSystem.pdb
+C:\Users\Ronan\Documents\Git\Virtual-Zoo-Management-System\VirtualZooManagementSystem\bin\Debug\VirtualZooManagementSystem.exe.config
+C:\Users\Ronan\Documents\Git\Virtual-Zoo-Management-System\VirtualZooManagementSystem\bin\Debug\VirtualZooManagementSystem.exe
+C:\Users\Ronan\Documents\Git\Virtual-Zoo-Management-System\VirtualZooManagementSystem\bin\Debug\VirtualZooManagementSystem.pdb
+C:\Users\Ronan\Documents\Git\Virtual-Zoo-Management-System\VirtualZooManagementSystem\obj\Debug\VirtualZooManagementSystem.csproj.AssemblyReference.cache
+C:\Users\Ronan\Documents\Git\Virtual-Zoo-Management-System\VirtualZooManagementSystem\obj\Debug\VirtualZooManagementSystem.MainForm.resources
+C:\Users\Ronan\Documents\Git\Virtual-Zoo-Management-System\VirtualZooManagementSystem\obj\Debug\VirtualZooManagementSystem.Properties.Resources.resources
+C:\Users\Ronan\Documents\Git\Virtual-Zoo-Management-System\VirtualZooManagementSystem\obj\Debug\VirtualZooManagementSystem.csproj.GenerateResource.cache
+C:\Users\Ronan\Documents\Git\Virtual-Zoo-Management-System\VirtualZooManagementSystem\obj\Debug\VirtualZooManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\Ronan\Documents\Git\Virtual-Zoo-Management-System\VirtualZooManagementSystem\obj\Debug\VirtualZooManagementSystem.exe
+C:\Users\Ronan\Documents\Git\Virtual-Zoo-Management-System\VirtualZooManagementSystem\obj\Debug\VirtualZooManagementSystem.pdb

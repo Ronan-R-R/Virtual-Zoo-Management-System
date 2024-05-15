@@ -53,14 +53,26 @@
           <DependentUpon>AddAnimalForm.cs</DependentUpon>
         </Compile>
         <Compile Include="Animal.cs" />
+        <Compile Include="Bird.cs">
+          <DependentUpon>Animal.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Fish.cs">
+          <DependentUpon>Animal.cs</DependentUpon>
+        </Compile>
         <Compile Include="MainForm.cs">
             <SubType>Form</SubType>
         </Compile>
         <Compile Include="MainForm.Designer.cs">
             <DependentUpon>MainForm.cs</DependentUpon>
         </Compile>
+        <Compile Include="Mammal.cs">
+          <DependentUpon>Animal.cs</DependentUpon>
+        </Compile>
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="Reptile.cs">
+          <DependentUpon>Animal.cs</DependentUpon>
+        </Compile>
         <EmbeddedResource Include="MainForm.resx">
           <DependentUpon>MainForm.cs</DependentUpon>
         </EmbeddedResource>

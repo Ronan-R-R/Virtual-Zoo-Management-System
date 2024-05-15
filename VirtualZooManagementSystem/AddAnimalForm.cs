@@ -1,44 +1,76 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace VirtualZooManagementSystem
 {
-    // Partial class for the form to add a new animal
     public partial class AddAnimalForm : Form
     {
-        // Property to get the newly created animal
         public Animal NewAnimal { get; private set; }
 
-        // Constructor for the AddAnimalForm
-        public AddAnimalForm()
+        private ComboBox comboBoxFoodType;
+        private ComboBox comboBoxHabitatType;
+        private AnimalType animalType; // Declare animalType variable
+
+        public AddAnimalForm(AnimalType animalType) // Add constructor to pass animalType
         {
-            // Initialize the AddAnimalForm components
             InitializeComponent();
-            // Center the AddAnimalForm on the screen
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.animalType = animalType; // Assign animalType
+
+            // Initialize combo boxes for food type and habitat type
+            comboBoxFoodType = new ComboBox();
+            comboBoxFoodType.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxFoodType.Items.AddRange(Enum.GetNames(typeof(FoodType)));
+            comboBoxFoodType.Location = new Point(102, 206);
+            comboBoxFoodType.SelectedIndex = 0;
+            this.Controls.Add(comboBoxFoodType);
+
+            comboBoxHabitatType = new ComboBox();
+            comboBoxHabitatType.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxHabitatType.Items.AddRange(Enum.GetNames(typeof(HabitatType)));
+            comboBoxHabitatType.Location = new Point(102, 236);
+            comboBoxHabitatType.SelectedIndex = 0;
+            this.Controls.Add(comboBoxHabitatType);
         }
 
-        // Event handler for the "Add" button click
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            // Retrieve values from the form controls
             string name = textBoxName.Text.Trim();
             int age = (int)numericUpDownAge.Value;
             string sound = textBoxSound.Text.Trim();
             string movement = textBoxMovement.Text.Trim();
-            string animalType = textBoxAnimalType.Text.Trim();
 
-            // Check if all fields are filled
-            if (!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(sound) && !string.IsNullOrEmpty(movement) && !string.IsNullOrEmpty(animalType))
+            if (!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(sound) && !string.IsNullOrEmpty(movement))
             {
-                // Create a new Animal object with the provided values
-                NewAnimal = new Animal(name, age, sound, movement, animalType);
-                // Set the dialog result to OK to indicate successful completion
+                // Get selected food type and habitat type
+                FoodType foodType = (FoodType)comboBoxFoodType.SelectedIndex;
+                HabitatType habitatType = (HabitatType)comboBoxHabitatType.SelectedIndex;
+
+                // Create a new animal based on the selected type
+                switch (animalType) // Use the animalType obtained from the constructor
+                {
+                    case AnimalType.Mammal:
+                        NewAnimal = new Mammal(name, age, sound, movement, foodType, habitatType);
+                        break;
+                    case AnimalType.Bird:
+                        NewAnimal = new Bird(name, age, sound, movement, foodType, habitatType);
+                        break;
+                    case AnimalType.Reptile:
+                        NewAnimal = new Reptile(name, age, sound, movement, foodType, habitatType);
+                        break;
+                    case AnimalType.Fish:
+                        NewAnimal = new Fish(name, age, sound, movement, foodType, habitatType);
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException("Unknown animal type.");
+                }
+
+                // Set dialog result to OK if creation is successful
                 DialogResult = DialogResult.OK;
             }
             else
             {
-                // Display an error message if any field is empty
                 MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

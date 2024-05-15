@@ -2,6 +2,7 @@
 {
     partial class MainForm
     {
+        
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -34,7 +35,7 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.listBoxZoo = new System.Windows.Forms.ListBox();
             this.labelName = new System.Windows.Forms.Label();
-            this.labelAnimalType = new System.Windows.Forms.Label(); // Update labelType to labelAnimalType
+            this.labelAnimalType = new System.Windows.Forms.Label(); 
             this.labelAge = new System.Windows.Forms.Label();
             this.labelSound = new System.Windows.Forms.Label();
             this.labelMovement = new System.Windows.Forms.Label();

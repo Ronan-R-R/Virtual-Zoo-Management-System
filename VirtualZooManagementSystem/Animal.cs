@@ -1,41 +1,97 @@
-﻿namespace VirtualZooManagementSystem
+﻿using System;
+
+namespace VirtualZooManagementSystem
 {
-    // Class representing an animal in the virtual zoo
-    public class Animal
+    // Enum to classify different types of animals
+    public enum AnimalType
     {
-        private int age; // Private field to store the age of the animal
+        Mammal,
+        Bird,
+        Reptile,
+        Fish
+    }
 
-        // Public property to get the name of the animal and allow setting within the class hierarchy
-        public string Name { get; protected set; }
+    // Enum to classify different types of food
+    public enum FoodType
+    {
+        Meat,
+        Vegetation,
+        Mixed
+    }
 
-        // Public property to display the age of the animal, with special handling for ages less than 1
-        public string DisplayAge => age == 0 ? "< 1" : age.ToString();
+    // Enum to classify different types of habitats
+    public enum HabitatType
+    {
+        Desert,
+        Forest,
+        Aquatic
+    }
 
-        // Public property to get the age of the animal and allow setting within the class hierarchy
+    // Struct to represent dietary information for animals
+    public struct DietInfo
+    {
+        public FoodType FoodType;
+        public string FeedingSchedule;
+    }
+
+    // Abstract class representing general animal behaviors
+    public abstract class Animal
+    {
+        // Private fields encapsulated with properties
+        private string _name;
+        private int _age;
+        private string _sound;
+        private string _movement;
+        private AnimalType _animalType;
+        private FoodType _foodType;
+        private HabitatType _habitatType;
+
+        // Public properties with specific get and set requirements
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+
         public int Age
         {
-            get { return age; }
-            protected set { age = value; }
+            get { return _age; }
+            set { _age = value; }
         }
 
-        // Public property to get the sound the animal makes
-        public string Sound { get; protected set; }
-
-        // Public property to get the movement pattern of the animal
-        public string Movement { get; protected set; }
-
-        // Public property to get the type of the animal
-        public string AnimalType { get; protected set; }
-
-        // Constructor to initialize an instance of the Animal class with provided parameters
-        public Animal(string name, int age, string sound, string movement, string animalType)
+        public string Sound
         {
-            // Initialize the properties of the animal with the provided values
-            Name = name;
-            Age = age;
-            Sound = sound;
-            Movement = movement;
-            AnimalType = animalType;
+            get { return _sound; }
+            set { _sound = value; }
         }
+
+        public string Movement
+        {
+            get { return _movement; }
+            set { _movement = value; }
+        }
+
+        public AnimalType AnimalType
+        {
+            get { return _animalType; }
+            set { _animalType = value; }
+        }
+
+        public FoodType FoodType
+        {
+            get { return _foodType; }
+            set { _foodType = value; }
+        }
+
+        public HabitatType HabitatType
+        {
+            get { return _habitatType; }
+            set { _habitatType = value; }
+        }
+
+        // Abstract methods representing general animal behaviors
+        public abstract void Eat(DietInfo dietInfo);
+        public abstract void Move();
+        public abstract void Speak();
     }
 }
