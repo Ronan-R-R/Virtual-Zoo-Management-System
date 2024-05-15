@@ -10,11 +10,13 @@ namespace VirtualZooManagementSystem
         private ComboBox comboBoxFoodType;
         private ComboBox comboBoxHabitatType;
         private ComboBox comboBoxAnimalType; // Added comboBoxAnimalType
+        private TextBox textBoxSpecies; // Added textBoxSpecies
 
         public AddAnimalForm()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle; // Prevent resizing
 
             // Initialize combo boxes for food type, habitat type, and animal type
             comboBoxFoodType = new ComboBox();
@@ -40,6 +42,12 @@ namespace VirtualZooManagementSystem
             comboBoxAnimalType.Size = new System.Drawing.Size(150, 21); // Adjusted size
             comboBoxAnimalType.SelectedIndex = 0;
             this.Controls.Add(comboBoxAnimalType);
+
+            // Initialize textBoxSpecies
+            textBoxSpecies = new TextBox();
+            textBoxSpecies.Location = new System.Drawing.Point(225, 172); // Adjusted location
+            textBoxSpecies.Size = new System.Drawing.Size(150, 20); // Adjusted size
+            this.Controls.Add(textBoxSpecies);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -48,6 +56,7 @@ namespace VirtualZooManagementSystem
             int age = (int)numericUpDownAge.Value;
             string sound = textBoxSound.Text.Trim();
             string movement = textBoxMovement.Text.Trim();
+            string species = textBoxSpecies.Text.Trim(); // Get species from textBoxSpecies
 
             if (!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(sound) && !string.IsNullOrEmpty(movement))
             {
@@ -58,16 +67,16 @@ namespace VirtualZooManagementSystem
                 switch (animalType)
                 {
                     case AnimalType.Mammal:
-                        NewAnimal = new Mammal(name, age, sound, movement, foodType, habitatType);
+                        NewAnimal = new Mammal(name, age, sound, movement, foodType, habitatType, species); // Pass species to constructor
                         break;
                     case AnimalType.Bird:
-                        NewAnimal = new Bird(name, age, sound, movement, foodType, habitatType);
+                        NewAnimal = new Bird(name, age, sound, movement, foodType, habitatType, species); // Pass species to constructor
                         break;
                     case AnimalType.Reptile:
-                        NewAnimal = new Reptile(name, age, sound, movement, foodType, habitatType);
+                        NewAnimal = new Reptile(name, age, sound, movement, foodType, habitatType, species); // Pass species to constructor
                         break;
                     case AnimalType.Fish:
-                        NewAnimal = new Fish(name, age, sound, movement, foodType, habitatType);
+                        NewAnimal = new Fish(name, age, sound, movement, foodType, habitatType, species); // Pass species to constructor
                         break;
                     default:
                         throw new ArgumentOutOfRangeException("Unknown animal type.");

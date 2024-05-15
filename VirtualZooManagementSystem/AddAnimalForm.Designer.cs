@@ -30,9 +30,10 @@
             this.labelAge = new System.Windows.Forms.Label();
             this.labelSound = new System.Windows.Forms.Label();
             this.labelMovement = new System.Windows.Forms.Label();
-            this.labelFoodType = new System.Windows.Forms.Label(); // Added label for Food Type
-            this.labelHabitatType = new System.Windows.Forms.Label(); // Added label for Habitat Type
-            this.labelAnimalType = new System.Windows.Forms.Label(); // Added label for Animal Type
+            this.labelFoodType = new System.Windows.Forms.Label();
+            this.labelHabitatType = new System.Windows.Forms.Label();
+            this.labelAnimalType = new System.Windows.Forms.Label();
+            this.labelSpecies = new System.Windows.Forms.Label(); // Added label for Animal Species
             this.btnAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAge)).BeginInit();
             this.SuspendLayout();
@@ -128,12 +129,21 @@
             this.labelAnimalType.TabIndex = 10;
             this.labelAnimalType.Text = "Animal Type";
             // 
+            // labelSpecies
+            // 
+            this.labelSpecies.AutoSize = true;
+            this.labelSpecies.Location = new System.Drawing.Point(225, 156);
+            this.labelSpecies.Name = "labelSpecies";
+            this.labelSpecies.Size = new System.Drawing.Size(45, 13);
+            this.labelSpecies.TabIndex = 11;
+            this.labelSpecies.Text = "Species";
+            // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(12, 216);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(363, 23);
-            this.btnAdd.TabIndex = 11;
+            this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -144,6 +154,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(387, 251); // Adjusted width and height
             this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.labelSpecies);
             this.Controls.Add(this.labelAnimalType);
             this.Controls.Add(this.labelHabitatType);
             this.Controls.Add(this.labelFoodType);
@@ -155,6 +166,7 @@
             this.Controls.Add(this.textBoxSound);
             this.Controls.Add(this.numericUpDownAge);
             this.Controls.Add(this.textBoxName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle; // Prevent resizing
             this.Name = "AddAnimalForm";
             this.Text = "Add Animal";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAge)).EndInit();
@@ -173,6 +185,7 @@
         private System.Windows.Forms.Label labelFoodType;
         private System.Windows.Forms.Label labelHabitatType;
         private System.Windows.Forms.Label labelAnimalType;
+        private System.Windows.Forms.Label labelSpecies;
         private System.Windows.Forms.Button btnAdd;
     }
 }

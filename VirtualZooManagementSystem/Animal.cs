@@ -45,6 +45,7 @@ namespace VirtualZooManagementSystem
         private AnimalType _animalType;
         private FoodType _foodType;
         private HabitatType _habitatType;
+        private string _species; // Added Species property
 
         // Public properties with specific get and set requirements
         public string Name
@@ -87,6 +88,12 @@ namespace VirtualZooManagementSystem
         {
             get { return _habitatType; }
             set { _habitatType = value; }
+        }
+
+        public string Species // Added Species property
+        {
+            get { return _species; }
+            set { _species = value; }
         }
 
         // Abstract methods representing general animal behaviors

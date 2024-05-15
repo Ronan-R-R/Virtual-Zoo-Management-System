@@ -4,7 +4,7 @@ namespace VirtualZooManagementSystem
 {
     public class Fish : Animal
     {
-        public Fish(string name, int age, string sound, string movement, FoodType foodType, HabitatType habitatType)
+        public Fish(string name, int age, string sound, string movement, FoodType foodType, HabitatType habitatType, string species)
         {
             Name = name;
             Age = age;
@@ -13,6 +13,7 @@ namespace VirtualZooManagementSystem
             AnimalType = AnimalType.Fish;
             this.FoodType = foodType;
             this.HabitatType = habitatType;
+            Species = species;
         }
 
         public override void Eat(DietInfo dietInfo)
