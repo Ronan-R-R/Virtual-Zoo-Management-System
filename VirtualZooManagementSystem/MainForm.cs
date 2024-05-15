@@ -16,6 +16,10 @@ namespace VirtualZooManagementSystem
             this.StartPosition = FormStartPosition.CenterScreen;
             // Initialize labels to be always visible
             SetLabelVisibility(true);
+            
+            // Set form border style to fixed and remove maximize box
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
         }
 
         private void btnAddAnimal_Click(object sender, EventArgs e)
