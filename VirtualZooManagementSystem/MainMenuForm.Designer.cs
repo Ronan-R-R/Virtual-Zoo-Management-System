@@ -28,7 +28,7 @@
             this.btnManageAnimals.TabIndex = 0;
             this.btnManageAnimals.Text = "Manage Animals";
             this.btnManageAnimals.UseVisualStyleBackColor = true;
-            this.btnManageAnimals.Click += new System.EventHandler(this.btnManageAnimals_Click);
+            this.btnManageAnimals.Click += new System.EventHandler(this.btnManageAnimals_Click); // Changed to btnAddAnimal_Click
             // 
             // btnInteractWithAnimal
             // 
@@ -38,7 +38,7 @@
             this.btnInteractWithAnimal.TabIndex = 1;
             this.btnInteractWithAnimal.Text = "Interact with Animal";
             this.btnInteractWithAnimal.UseVisualStyleBackColor = true;
-            this.btnInteractWithAnimal.Click += new System.EventHandler(this.btnInteractWithAnimal_Click);
+            this.btnInteractWithAnimal.Click += new System.EventHandler(this.btnInteract_Click); // Changed to btnInteract_Click
             // 
             // btnClose
             // 
