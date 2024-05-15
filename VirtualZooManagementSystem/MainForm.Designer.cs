@@ -17,6 +17,10 @@ namespace VirtualZooManagementSystem
 
         #region Windows Form Designer generated code
 
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
         private void InitializeComponent()
         {
             this.btnAddAnimal = new System.Windows.Forms.Button();
@@ -37,10 +41,9 @@ namespace VirtualZooManagementSystem
             // 
             // btnAddAnimal
             // 
-            this.btnAddAnimal.Location = new System.Drawing.Point(16, 15);
-            this.btnAddAnimal.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddAnimal.Location = new System.Drawing.Point(12, 12);
             this.btnAddAnimal.Name = "btnAddAnimal";
-            this.btnAddAnimal.Size = new System.Drawing.Size(141, 28);
+            this.btnAddAnimal.Size = new System.Drawing.Size(106, 23);
             this.btnAddAnimal.TabIndex = 0;
             this.btnAddAnimal.Text = "Add Animal";
             this.btnAddAnimal.UseVisualStyleBackColor = true;
@@ -48,18 +51,16 @@ namespace VirtualZooManagementSystem
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(165, 17);
-            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSearch.Location = new System.Drawing.Point(124, 14);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(176, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(133, 20);
             this.textBoxSearch.TabIndex = 1;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(351, 15);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch.Location = new System.Drawing.Point(263, 12);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(100, 28);
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -67,10 +68,9 @@ namespace VirtualZooManagementSystem
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(459, 15);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReset.Location = new System.Drawing.Point(344, 12);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(100, 28);
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
             this.btnReset.TabIndex = 3;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
@@ -79,65 +79,57 @@ namespace VirtualZooManagementSystem
             // listBoxZoo
             // 
             this.listBoxZoo.FormattingEnabled = true;
-            this.listBoxZoo.ItemHeight = 16;
-            this.listBoxZoo.Location = new System.Drawing.Point(16, 50);
-            this.listBoxZoo.Margin = new System.Windows.Forms.Padding(4);
+            this.listBoxZoo.Location = new System.Drawing.Point(12, 41);
             this.listBoxZoo.Name = "listBoxZoo";
-            this.listBoxZoo.Size = new System.Drawing.Size(541, 180);
+            this.listBoxZoo.Size = new System.Drawing.Size(407, 147);
             this.listBoxZoo.TabIndex = 4;
             this.listBoxZoo.SelectedIndexChanged += new System.EventHandler(this.listBoxZoo_SelectedIndexChanged);
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(16, 246);
-            this.labelName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelName.Location = new System.Drawing.Point(12, 200);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(0, 17);
+            this.labelName.Size = new System.Drawing.Size(0, 13);
             this.labelName.TabIndex = 5;
             // 
             // labelAnimalType
             // 
             this.labelAnimalType.AutoSize = true;
-            this.labelAnimalType.Location = new System.Drawing.Point(16, 270);
-            this.labelAnimalType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAnimalType.Location = new System.Drawing.Point(12, 219);
             this.labelAnimalType.Name = "labelAnimalType";
-            this.labelAnimalType.Size = new System.Drawing.Size(0, 17);
+            this.labelAnimalType.Size = new System.Drawing.Size(0, 13);
             this.labelAnimalType.TabIndex = 6;
             // 
             // labelAge
             // 
             this.labelAge.AutoSize = true;
-            this.labelAge.Location = new System.Drawing.Point(16, 293);
-            this.labelAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAge.Location = new System.Drawing.Point(12, 238);
             this.labelAge.Name = "labelAge";
-            this.labelAge.Size = new System.Drawing.Size(0, 17);
+            this.labelAge.Size = new System.Drawing.Size(0, 13);
             this.labelAge.TabIndex = 7;
             // 
             // labelSound
             // 
             this.labelSound.AutoSize = true;
-            this.labelSound.Location = new System.Drawing.Point(16, 316);
-            this.labelSound.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSound.Location = new System.Drawing.Point(12, 257);
             this.labelSound.Name = "labelSound";
-            this.labelSound.Size = new System.Drawing.Size(0, 17);
+            this.labelSound.Size = new System.Drawing.Size(0, 13);
             this.labelSound.TabIndex = 8;
             // 
             // labelMovement
             // 
             this.labelMovement.AutoSize = true;
-            this.labelMovement.Location = new System.Drawing.Point(16, 340);
-            this.labelMovement.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMovement.Location = new System.Drawing.Point(12, 276);
             this.labelMovement.Name = "labelMovement";
-            this.labelMovement.Size = new System.Drawing.Size(0, 17);
+            this.labelMovement.Size = new System.Drawing.Size(0, 13);
             this.labelMovement.TabIndex = 9;
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(473, 336);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClear.Location = new System.Drawing.Point(355, 195);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(85, 28);
+            this.btnClear.Size = new System.Drawing.Size(64, 23);
             this.btnClear.TabIndex = 10;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -146,35 +138,32 @@ namespace VirtualZooManagementSystem
             // labelSpecies
             // 
             this.labelSpecies.AutoSize = true;
-            this.labelSpecies.Location = new System.Drawing.Point(16, 363);
-            this.labelSpecies.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSpecies.Location = new System.Drawing.Point(150, 200);
             this.labelSpecies.Name = "labelSpecies";
-            this.labelSpecies.Size = new System.Drawing.Size(0, 17);
+            this.labelSpecies.Size = new System.Drawing.Size(0, 13);
             this.labelSpecies.TabIndex = 11;
             // 
             // labelFoodType
             // 
             this.labelFoodType.AutoSize = true;
-            this.labelFoodType.Location = new System.Drawing.Point(16, 386);
-            this.labelFoodType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelFoodType.Location = new System.Drawing.Point(150, 219);
             this.labelFoodType.Name = "labelFoodType";
-            this.labelFoodType.Size = new System.Drawing.Size(0, 17);
+            this.labelFoodType.Size = new System.Drawing.Size(0, 13);
             this.labelFoodType.TabIndex = 12;
             // 
             // labelHabitatType
             // 
             this.labelHabitatType.AutoSize = true;
-            this.labelHabitatType.Location = new System.Drawing.Point(16, 409);
-            this.labelHabitatType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelHabitatType.Location = new System.Drawing.Point(150, 238);
             this.labelHabitatType.Name = "labelHabitatType";
-            this.labelHabitatType.Size = new System.Drawing.Size(0, 17);
+            this.labelHabitatType.Size = new System.Drawing.Size(0, 13);
             this.labelHabitatType.TabIndex = 13;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 440);
+            this.ClientSize = new System.Drawing.Size(431, 297);
             this.Controls.Add(this.labelHabitatType);
             this.Controls.Add(this.labelFoodType);
             this.Controls.Add(this.labelSpecies);
@@ -189,12 +178,10 @@ namespace VirtualZooManagementSystem
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.btnAddAnimal);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "Virtual Zoo Management System";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

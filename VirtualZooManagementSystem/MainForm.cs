@@ -84,10 +84,16 @@ namespace VirtualZooManagementSystem
 
         private void DisplayAnimalDetails(Animal animal)
         {
+            // Clear previous details
+            ClearAnimalDetails();
+
+            // Column 1
             labelName.Text = $"Name: {animal.Name}";
             labelAnimalType.Text = $"Animal Type: {animal.AnimalType}";
             labelAge.Text = $"Age: {animal.Age}";
             labelSound.Text = $"Sound: {animal.Sound}";
+
+            // Column 2
             labelMovement.Text = $"Movement: {animal.Movement}";
             labelSpecies.Text = $"Species: {animal.Species}";
             labelFoodType.Text = $"Food Type: {animal.FoodType}";
