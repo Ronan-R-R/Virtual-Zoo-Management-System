@@ -17,17 +17,29 @@ namespace VirtualZooManagementSystem
             MinimizeBox = false; // Disable minimize button
             this.zoo = zoo;
         }
-
-        private void btnListen_Click(object sender, EventArgs e)
+        // got too annoyed ;-;
+        /*private void btnListen_Click(object sender, EventArgs e)
         {
             AnimalMenuForm animalMenuForm = new AnimalMenuForm(zoo);
             animalMenuForm.StartPosition = FormStartPosition.CenterScreen;
             animalMenuForm.ShowDialog();
-        }
-
+        }*/
+        private DateTime lastFeedTime = DateTime.MinValue;
         private void btnFeed_Click(object sender, EventArgs e)
         {
-            // Implement feeding action
+            TimeSpan timeSinceLastFeed = DateTime.Now - lastFeedTime;
+            if (timeSinceLastFeed.TotalHours < 12)
+            {
+                MessageBox.Show("Animals already have been fed", "Feed Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Animals are now fed", "Feed Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lastFeedTime = DateTime.Now; // Update the last feed time
+            }
+            MainMenuForm mainMenuForm = new MainMenuForm();
+            mainMenuForm.StartPosition = FormStartPosition.CenterScreen;
+            mainMenuForm.Show();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
